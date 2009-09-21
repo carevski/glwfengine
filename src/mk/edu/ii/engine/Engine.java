@@ -4,16 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.logging.Logger;
 
+import mk.edu.ii.events.Event;
+import mk.edu.ii.events.impl.EventStart;
 import mk.edu.ii.listeners.Listener;
 import net.kwfgrid.gworkflowdl.structure.Workflow;
 
 public class Engine {
 
-	String id;
-	String trans;
+	private String id;
+	private String trans;
 	
-	BlockingQueue blockQueue;
+	private Logger log = Logger.getLogger("mk.edu.ii.engine.Engine");
+	
+	private BlockingQueue<Event> eventQueue;
 	//StateMachine stateMachine;
 	
 	private List<Listener> stateListeners;
@@ -34,7 +39,7 @@ public class Engine {
 		fireListeners = new ArrayList<Listener>();
 		markingListeners = new ArrayList<Listener>();
 		workflowListeners = new ArrayList<Listener>();
-		blockQueue =  new LinkedBlockingQueue();
+		eventQueue =  new LinkedBlockingQueue<Event>();
 		
 	}
 
@@ -82,17 +87,20 @@ public class Engine {
 		return id;
 	}
 	
+	
+	/**
+	 * Starts the engine
+	 */
+	void start(){
+		eventQueue.add(new EventStart());
+		log.info("Event Start happend for engine startup.");
+	}
 
 	void run(){
 		
 	};
 
-	/**
-	 * Starts the engine
-	 */
-	void start(){
-		
-	}
+
 
 	/**
 	 * Stops the engine and puts it into the Idle state
