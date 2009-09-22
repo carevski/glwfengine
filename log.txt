@@ -1,3 +1,0 @@
-0    [main] INFO  (Application.java:22)  - Configuration for logging system loaded
-4    [main] INFO  (SimpleRunner.java:162)  - Info od doIT
-4    [main] WARN  (SimpleRunner.java:163)  - nekoja poraka
