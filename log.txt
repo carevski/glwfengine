@@ -1,8 +1,3 @@
-Sep 22, 2009 2:13:10 AM java.util.logging.LogManager$RootLogger log
-INFO: Informativna poraka nisto drugo
-Sep 22, 2009 2:13:10 AM java.util.logging.LogManager$RootLogger log
-WARNING: Waeninig
-Sep 22, 2009 2:13:10 AM mk.edu.ii.test.SimpleRunner doIT
-INFO: Info od doIT
-Sep 22, 2009 2:13:10 AM mk.edu.ii.test.SimpleRunner doIT
-WARNING: Warnign od doIT
+0    [main] INFO  (Application.java:22)  - Configuration for logging system loaded
+4    [main] INFO  (SimpleRunner.java:162)  - Info od doIT
+4    [main] WARN  (SimpleRunner.java:163)  - nekoja poraka

@@ -3,13 +3,6 @@ package mk.edu.ii.test;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Handler;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-
-import org.apache.log4j.BasicConfigurator;
 
 import mk.edu.ii.app.Application;
 import net.kwfgrid.gworkflowdl.analysis.WorkflowAnalyzer;
@@ -34,6 +27,8 @@ import net.kwfgrid.gworkflowdl.structure.Token;
 import net.kwfgrid.gworkflowdl.structure.Transition;
 import net.kwfgrid.gworkflowdl.structure.Workflow;
 import net.kwfgrid.gworkflowdl.structure.WorkflowFormatException;
+
+import org.apache.log4j.Logger;
 
 public class SimpleRunner {
 
@@ -163,14 +158,14 @@ public class SimpleRunner {
 	}
 	
 	public static void doIT(){
-		Logger log = Logger.getLogger(SimpleRunner.class.getName());
+		Logger log = Logger.getLogger(SimpleRunner.class);
 		log.info("Info od doIT");
-		log.warning("Warnign od doIT");
+		log.warn("nekoja poraka");
 	}
-	static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(SimpleRunner.class);
+	static Logger log = Logger.getLogger(SimpleRunner.class);
 	public static void main(String [] args){
-		BasicConfigurator.configure();
-		log.debug("nekoja poraka");
+		Application app = new Application();
+		doIT();
 	}
 	
 }
