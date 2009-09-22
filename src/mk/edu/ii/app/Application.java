@@ -3,6 +3,7 @@ package mk.edu.ii.app;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Properties;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -24,6 +25,9 @@ public class Application {
 		boolean inputError = false;
 		try {
 			properties.load(new FileInputStream("app.properties"));
+			
+			String logLevel = (String)properties.get(Constants.logLevel);	
+				System.out.println(logLevel);
 		} catch (FileNotFoundException e) {
 			globalLogger.fine("app.properties does not exist.");
 			inputError = true;

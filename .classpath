@@ -2,8 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="lib/wf_dep/jdom 1.1.1.jar"/>
-	<classpathentry kind="lib" path="lib/wf_dep/jug-1.1.2.jar"/>
-	<classpathentry kind="lib" path="lib/gworkflowdl-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/glworkflow/gworkflowdl-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/glworkflow/jdom 1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/glworkflow/jug-1.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/common/log4j-1.2.15.jar" sourcepath="lib-src/apache-log4j-1.2.15"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

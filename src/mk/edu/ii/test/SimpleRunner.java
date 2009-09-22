@@ -9,6 +9,8 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import org.apache.log4j.BasicConfigurator;
+
 import mk.edu.ii.app.Application;
 import net.kwfgrid.gworkflowdl.analysis.WorkflowAnalyzer;
 import net.kwfgrid.gworkflowdl.structure.ArrayListOperationClass;
@@ -165,15 +167,10 @@ public class SimpleRunner {
 		log.info("Info od doIT");
 		log.warning("Warnign od doIT");
 	}
-	
+	static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(SimpleRunner.class);
 	public static void main(String [] args){
-		Application app = new Application();
-		
-		Logger log = Logger.getLogger("");
-		log.info("Informativna poraka nisto drugo");
-		log.warning("Waeninig");
-		
-		doIT();
+		BasicConfigurator.configure();
+		log.debug("nekoja poraka");
 	}
 	
 }
