@@ -43,9 +43,8 @@ public class Application {
 			// seting up logging level
 			try {
 				if ((value = properties.getProperty(Constants.logLevel)) != null)
-					Level level = toLogLevel(Integer.parseInt(value));
-					globalLogger.setLevel(level);
-					globalLogger.info("Logging level set to:" + level.getName());
+					globalLogger.setLevel(toLogLevel(Integer.parseInt(value)));
+					globalLogger.info("Logging level set to:" + toLogLevel(Integer.parseInt(value)).getName());
 			} catch (NumberFormatException e) {
 				globalLogger.setLevel(Constants.defLogLevel);
 			}
