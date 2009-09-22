@@ -16,7 +16,7 @@ public class Engine {
 	private String id;
 	private String trans;
 	
-	private Logger log = Logger.getLogger("mk.edu.ii.engine.Engine");
+	private Logger log = Logger.getLogger(Engine.class.getName());
 	
 	private BlockingQueue<Event> eventQueue;
 	//StateMachine stateMachine;

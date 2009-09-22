@@ -3,7 +3,13 @@ package mk.edu.ii.test;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
+import mk.edu.ii.app.Application;
 import net.kwfgrid.gworkflowdl.analysis.WorkflowAnalyzer;
 import net.kwfgrid.gworkflowdl.structure.ArrayListOperationClass;
 import net.kwfgrid.gworkflowdl.structure.ArrayListPlace;
@@ -154,8 +160,20 @@ public class SimpleRunner {
 		return wf;
 	}
 	
-	public void main(String [] args){
+	public static void doIT(){
+		Logger log = Logger.getLogger(SimpleRunner.class.getName());
+		log.info("Info od doIT");
+		log.warning("Warnign od doIT");
+	}
+	
+	public static void main(String [] args){
+		Application app = new Application();
 		
+		Logger log = Logger.getLogger("");
+		log.info("Informativna poraka nisto drugo");
+		log.warning("Waeninig");
+		
+		doIT();
 	}
 	
 }

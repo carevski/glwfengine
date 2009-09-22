@@ -1,0 +1,8 @@
+Sep 22, 2009 1:47:18 AM java.util.logging.LogManager$RootLogger log
+INFO: Informativna poraka nisto drugo
+Sep 22, 2009 1:47:19 AM java.util.logging.LogManager$RootLogger log
+WARNING: Waeninig
+Sep 22, 2009 1:47:19 AM mk.edu.ii.test.SimpleRunner doIT
+INFO: Info od doIT
+Sep 22, 2009 1:47:19 AM mk.edu.ii.test.SimpleRunner doIT
+WARNING: Warnign od doIT
